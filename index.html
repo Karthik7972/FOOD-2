@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order Website - Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="website-container">
+        <div class="fullscreen-video-container">
+            <video id="background-video" width="100%" height="auto" autoplay loop muted>
+                <source src="video (2160p).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="registration-overlay">
+                <div class="registration-container">
+                    <form action="register.php" method="post">
+                        <h2>Register</h2>
+                        <label for="username">Username:</label>
+                        <input type="text" name="username" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" required>
+
+                        <label for="password">Password:</label>
+                        <input type="password" name="password" required>
+
+                        <label for="confirm_password">Confirm Password:</label>
+                        <input type="password" name="confirm_password" required>
+
+                        <button type="submit">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var video = document.getElementById('background-video');
+
+            // Trigger full-screen mode when the video is clicked
+            video.addEventListener('click', function () {
+                if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                } else if (video.mozRequestFullScreen) {
+                    video.mozRequestFullScreen();
+                } else if (video.webkitRequestFullscreen) {
+                    video.webkitRequestFullscreen();
+                } else if (video.msRequestFullscreen) {
+                    video.msRequestFullscreen();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
